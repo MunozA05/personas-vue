@@ -10,10 +10,8 @@
                     <div class="row mb-3">
                         <label for="comu_codi" class="form-label">Código:</label>
                         <div class="input-group">
-                            <div class="input-group-text">
-                                <font-awesome-icon icon="tag" />
-                            </div>
-                            <input type="text" class="form-control" id="comu_codi" placeholder="Código Comuna" v-model="comuna.comu_codi">
+                            <div class="input-group-text"><font-awesome-icon icon="tag" /></div>
+                            <input type="text" class="form-control" id="comu_codi" placeholder="Código Comuna" disabled v-model='comuna.comu_codi'>
                         </div>
                     </div>
 
@@ -23,7 +21,7 @@
                             <div class="input-group-text">
                                 <font-awesome-icon icon="building" />
                             </div>
-                            <input type="text" class="form-control" id="comu_nomb" placeholder="Nombre Comuna" v-model="comuna.comu_nomb">
+                            <input type="text" class="form-control" id="comu_nomb" placeholder="Nombre Comuna" v-model='comuna.comu_nomb'>
                         </div>
                     </div>
 
@@ -35,7 +33,7 @@
                             </div>
                             <select class="form-select" v-model="comuna.muni_codi">
                                 <option selected value="0">Seleccione un Municipio</option>
-                                <option v-for="municipio in municipios" v-bind:value="municipio.muni_codi">
+                                <option v-for="municipio in municipios" v-bind:value='municipio.muni_codi'>
                                     {{ municipio.muni_nomb }}
                                 </option>
                             </select>

@@ -13,7 +13,7 @@
                             <div class="input-group-text">
                                 <font-awesome-icon icon="tag" />
                             </div>
-                            <input type="text" class="form-control" id="comu_codi" placeholder="Código Comuna" v-model="comuna.comu_codi" disabled>
+                            <input type="text" class="form-control" id="comu_codi" placeholder="Código Comuna" v-model='comuna.comu_codi' disabled>
                         </div>
                     </div>
 
@@ -23,7 +23,7 @@
                             <div class="input-group-text">
                                 <font-awesome-icon icon="building" />
                             </div>
-                            <input type="text" class="form-control" id="comu_nomb" placeholder="Nombre Comuna" v-model="comuna.comu_nomb">
+                            <input type="text" class="form-control" id="comu_nomb" placeholder="Nombre Comuna" v-model='comuna.comu_nomb'>
                         </div>
                     </div>
 
@@ -34,7 +34,8 @@
                                 <font-awesome-icon icon="bank" />
                             </div>
                             <select class="form-select" v-model="comuna.muni_codi">
-                                <option v-for="municipio in municipios" :value="municipio.muni_codi">
+                                <option selected value="0">Seleccione un Municipio</option>
+                                <option v-for="municipio in municipios" :key="municipio.muni_codi" :value="municipio.muni_codi">
                                     {{ municipio.muni_nomb }}
                                 </option>
                             </select>
@@ -58,9 +59,9 @@ export default {
     data() {
         return {
             comuna: {
-                comu_codi: 0,
+                comu_codi: null,
                 comu_nomb: '',
-                muni_codi: 0,
+                muni_codi: null,
             },
             municipios: []
         };
