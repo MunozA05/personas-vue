@@ -5,6 +5,8 @@ import Comunas from '../views/Comunas.vue'
 import NewComuna from '../components/Comuna/NewComuna.vue'
 import EditarComuna from '../components/Comuna/EditarComuna.vue'
 import Municipios from '../views/Municipios.vue'
+import EditarMunicipio from '../components/Municipio/EditarMunicipio.vue'
+import NewMunicipio from '../components/Municipio/NewMunicipio.vue'
 
 
 const routes = [
@@ -41,12 +43,12 @@ const routes = [
   {
     path: '/municipios/nuevo',
     name: 'NuevoMunicipio',
-    component: () => import('../components/NuevoMunicipio.vue'),
+    component: NewMunicipio,
   },
   {
     path: '/municipios/editar/:id',
     name: 'EditarMunicipio',
-    component: () => import('../components/EditarMunicipio.vue'),
+    component: EditarMunicipio,
   },
 
 ]
