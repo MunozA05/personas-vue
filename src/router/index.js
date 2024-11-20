@@ -7,6 +7,9 @@ import EditarComuna from '../components/Comuna/EditarComuna.vue'
 import Municipios from '../views/Municipios.vue'
 import EditarMunicipio from '../components/Municipio/EditarMunicipio.vue'
 import NewMunicipio from '../components/Municipio/NewMunicipio.vue'
+import Departamentos from '../views/Departamentos.vue'
+import NewDepartamento from '../components/Departamento/NewDepartamento.vue'
+import EditarDepartamento from '../components/Departamento/EditarDepartamento.vue'
 
 
 const routes = [
@@ -49,6 +52,21 @@ const routes = [
     path: '/municipios/editar/:id',
     name: 'EditarMunicipio',
     component: EditarMunicipio,
+  },
+  {
+    path: '/departamentos',
+    name: 'Departamentos',
+    component: Departamentos
+  },
+  {
+    path: '/departamentos/nuevo',
+    name: 'NuevoDepartamento',
+    component: NewDepartamento,
+  },
+  {
+    path: '/departamentos/editar/:id',
+    name: 'EditarDepartamento',
+    component: EditarDepartamento,
   },
 
 ]
