@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # personas
 
 ## Project setup
@@ -17,3 +18,7 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# personas-vue
+FrontEnd (Vue)
+>>>>>>> 971de25c68998b3c01881c658a1620c8250400f8

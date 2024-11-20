@@ -2,6 +2,9 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
 import Comunas from '../views/Comunas.vue'
+import NewComuna from '../components/Comuna/NewComuna.vue'
+import EditarComuna from '../components/Comuna/EditarComuna.vue'
+
 
 const routes = [
   {
@@ -12,11 +15,23 @@ const routes = [
   {
     path: '/comunas',
     name: 'Comunas',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: Comunas
-  }
+  },
+  {
+    path: '/editar-comuna/:id',
+    name: 'EditarComuna',
+    component: EditarComuna
+  },
+  {
+    path: '/add-comuna/',
+    name: 'NewComuna',
+    component: NewComuna
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/AboutView.vue')
+  },
 ]
 
 const router = createRouter({
